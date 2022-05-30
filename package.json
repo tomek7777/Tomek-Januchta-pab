@@ -1,0 +1,32 @@
+{
+    "name": "tomek-januchta-pab",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/server.ts",
+    "scripts": {
+        "build": "rm -rf build/ && tsc",
+        "start": "node build/server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tomek7777/Tomek-Januchta-pab.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/tomek7777/Tomek-Januchta-pab/issues"
+    },
+    "homepage": "https://github.com/tomek7777/Tomek-Januchta-pab#readme",
+    "dependencies": {
+        "chalk": "^4.1.2",
+        "dotenv": "^16.0.0",
+        "express": "^4.17.3",
+        "joi": "^17.6.0",
+        "mongoose": "^6.2.3",
+        "nodemon": "^2.0.16"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.13",
+        "typescript": "^4.7.2"
+    }
+}
