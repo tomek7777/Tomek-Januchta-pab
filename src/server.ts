@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import { config } from './config/config';
 import Logging from './library/Logging';
 import directorRoutes from './routes/Director';
+import filmRoutes from './routes/Film';
 
 const router = express();
 
@@ -53,4 +54,17 @@ const StartServer = () => {
     //Routes
 
     router.use('/directors', directorRoutes);
+    router.use('/films', filmRoutes);
+
+    router.use((req, res, next) => {
+        const error = new Error('Not found');
+
+        Logging.error(error);
+
+        res.status(404).json({
+            message: error.message
+        });
+    });
+
+    http.createServer(router).listen(config.server.port, () => Logging.info(`Server is running on port ${config.server.port}`));
 };

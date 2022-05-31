@@ -4,9 +4,9 @@ import controller from '../controllers/Director';
 const router = express.Router();
 
 router.post('/create', controller.createDirector);
-router.get('/get/:authorId', controller.readDirector);
+router.get('/get/:directorId', controller.readDirector);
 router.get('/get', controller.readAll);
-router.patch('/update/:authorId', controller.updateDirector);
-router.delete('/delete/:authorId', controller.deleteDirector);
+router.patch('/update/:directorId', controller.updateDirector);
+router.delete('/delete/:directorId', controller.deleteDirector);
 
 export = router;
