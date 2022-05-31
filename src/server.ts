@@ -20,7 +20,6 @@ mongoose
         Logging.error(error);
     });
 
-/** Only Start Server if Mongoose Connects */
 const StartServer = () => {
     /** Log the request */
     router.use((req, res, next) => {
@@ -35,6 +34,7 @@ const StartServer = () => {
         next();
     });
 
+    //wywolanie routerow
     router.use(express.urlencoded({ extended: true }));
     router.use(express.json());
 
